@@ -126,6 +126,7 @@ param_strategy,material,stage,tool_type,vc_m_per_min,fz_mm_per_tooth,ap_mm,ae_ra
 P20_ROUGH_STD,P20,ROUGH,FLAT_END_MILL,140,0.06,1.5,0.35,9000,3200,0.00,0.20,0.15
 P20_FINISH_STD,P20,FINISH,BALL_END_MILL,180,0.03,0.4,0.12,10000,2500,0.20,0.00,0.00
 STEEL_DRILL_STD,45#,SEMI,DRILL,90,0.00,0.0,0.00,7000,1200,0.00,0.00,0.00
+GENERIC_ROUGH_SAFE,GENERIC,ROUGH,FLAT_END_MILL,100,0.04,0.8,0.20,6000,1800,0.00,0.30,0.20
 ```
 
 ### 6.4 op_template_map.csv
@@ -158,7 +159,7 @@ OPR_CHAMFER,Chamfer_Milling,TPL_CHAMFER_STD_V1,HOLE_EDGE,HOLE_EDGE,CONTOUR
 
 - `feature_type=POCKET, size_max=999, depth_max=999, priority=10`
 - `tool_strategy=ENDMILL_FLAT_AUTO`
-- `param_strategy=GENERIC_ROUGH_SAFE`
+- `param_strategy=GENERIC_ROUGH_SAFE`（需在 `cut_param_lib.csv` 中存在同名策略）
 - `op_chain=OPR_CAVITY_MILL`
 
 这样可确保未知特征也能自动生成基础刀路，再由程序员二次优化。
