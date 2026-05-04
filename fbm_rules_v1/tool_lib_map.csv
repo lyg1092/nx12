@@ -1,0 +1,4 @@
+tool_strategy,tool_type,dia_formula,flute_len_min_formula,holder_type,overhang_max,brand_prefer,alt_tool_strategy
+ENDMILL_FLAT_AUTO,FLAT_END_MILL,"min(0.8*feature_width,16)","depth+2",HSK63A,70,"Sandvik,OSG",ENDMILL_FLAT_SMALL
+ENDMILL_BALL_AUTO,BALL_END_MILL,"min(0.25*feature_radius,12)","depth+3",HSK63A,75,"Mitsubishi,OSG",ENDMILL_BALL_SMALL
+DRILL_STD,DRILL,"feature_diameter","depth+5",HSK63A,90,"Guhring,OSG",DRILL_PECK
